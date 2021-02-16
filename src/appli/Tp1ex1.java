@@ -1,4 +1,18 @@
+package appli;
+
+import game.ChessBoard;
+import game.Color;
+import game.Coord;
+import game.boardException.IllegalMove;
+import game.boardException.IllegalPosition;
+import game.chessPiece.*;
+
 public class Tp1ex1 {
+    /**
+     *
+     * @param args an array argument used with the console.
+     */
+
     public static void main(String[] args) {
         ChessBoard myChess = new ChessBoard();
 
@@ -86,14 +100,12 @@ public class Tp1ex1 {
             // My news positions
             Coord myCoordPawnW1 = new Coord(4,1);
             myPawnW1.move(myCoordPawnW1);
-
             Coord myQueenPawnB = new Coord(9,5);
             myQueenB.move(myQueenPawnB);
-
         } catch (IllegalPosition e){
-            System.out.println("Out of range");
+            System.out.println(e);
         } catch (IllegalMove e){
-            System.out.println("Invalide Position");
+            System.out.println(e);
         }
         myChess.smartPrint();
 

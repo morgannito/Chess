@@ -1,4 +1,18 @@
-public class Pawn {
+package game.chessPiece;
+
+import game.ChessBoard;
+import game.Color;
+import game.Coord;
+import game.Piece;
+import game.boardException.IllegalMove;
+import game.boardException.IllegalPosition;
+
+/**
+ * A piece of chess : pawn
+ */
+
+public class Pawn extends Piece {
+
     public ChessBoard board;
     public Color col;
     public Coord place;
@@ -14,14 +28,12 @@ public class Pawn {
         return board;
     }
 
-    //Setter
-    public void setBoard(ChessBoard board) { this.board = board; }
-    public void setPlace(Coord place) {
-        this.place = place;
-    }
-    public void setCol(Color col) {
-        this.col = col;
-    }
+    /**
+     *
+     * @param place corresponds of the position's piece
+     * @param col corresponds of tge color's piece
+     * @param board corresponds of the board with de pieces
+     */
 
     public Pawn(Coord place, Color col, ChessBoard board) {
         this.place = place;
@@ -30,43 +42,39 @@ public class Pawn {
         this.board.setOccupation(this.place, true);
     }
 
+    /**
+     *
+     * @param c corresponds to the new desired position.
+     * @throws IllegalPosition except an exception when the piece is out of matrix
+     * @throws IllegalMove except an exception when  the piece make a move out of this capacity.
+     */
+
     public void move(Coord c) throws IllegalPosition, IllegalMove {
-        int dx = Math.abs(this.place.getX() - c.getX());
         int dy = Math.abs(this.place.getY() - c.getY());
-        System.out.println("placex" + this.place.getX());
-        System.out.println("placey"+ this.place.getY());
-        System.out.println("cx" + c.getX());
-        System.out.println("cy"+ c.getY());
-
-
 
         if(getCol() == Color.WHITE) {
             if ((c.getX() == this.place.getX() + 1 && dy == 0) || (this.place.getX() == 1 && c.getX() <= this.place.getX() + 2 && dy == 0)){
                 if (c.getX() < 8 && c.getX() >= 0 && c.getY() < 8 && c.getY() >= 0 && !getBoard().isOccupied(c)) {
-                    System.out.println("OK");
                     this.board.setOccupation(this.place, false);
                     this.place = c;
                     this.board.setOccupation(c, true);
                 } else {
-                    System.out.println("error");
-                    throw new IllegalPosition();
+                    throw new IllegalMove("Illegal move for the Pawn");
                 }
             } else {
-                throw new IllegalMove();
+                throw new IllegalPosition("The Pawn is out of range");
             }
         } else if(getCol() == Color.BLACK){
             if ((c.getX() == this.place.getX() - 1 && dy == 0) || (this.place.getX() == 6 && c.getX() <= this.place.getX() - 2 && dy == 0)){
                 if (c.getX() < 8 && c.getX() >= 0 && c.getY() < 8 && c.getY() >= 0 && !getBoard().isOccupied(c)) {
-                    System.out.println("OK");
                     this.board.setOccupation(this.place, false);
                     this.place = c;
                     this.board.setOccupation(c, true);
                 } else {
-                    System.out.println("error");
-                    throw new IllegalPosition();
+                    throw new IllegalMove("Illegal move for the Pawn");
                 }
             } else {
-                throw new IllegalPosition();
+                throw new IllegalPosition("The Pawn is out of range");
             }
         }
     }

@@ -1,3 +1,12 @@
+package game;
+
+import game.boardException.IllegalMove;
+import game.boardException.IllegalPosition;
+
+/**
+ * Mother class for all pieces of chessboard
+ */
+
 public abstract class Piece {
     protected ChessBoard board;
     protected Coord place;
@@ -8,11 +17,6 @@ public abstract class Piece {
     public ChessBoard getBoard() { return board; }
     public Color getCol() { return col; }
 
-    //Setter
-    public void setBoard(ChessBoard board) { this.board = board; }
-    public void setPlace(Coord place) { this.place = place; }
-    public void setCol(Color col) { this.col = col; }
-
-    abstract void move(Coord c) throws IllegalPosition, IllegalMove;
+    protected abstract void move(Coord c) throws IllegalMove, IllegalPosition;
 }
 

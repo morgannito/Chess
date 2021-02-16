@@ -1,6 +1,14 @@
+package game;
+
 public class Coord {
     private int x;
     private int y;
+
+    /**
+     *
+     * @param x represent the x value coordinate in matrix
+     * @param y represent the y value coordinate in matrix
+     */
 
     public Coord(int x, int y) {
         this.x = x - 1;
