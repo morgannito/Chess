@@ -3,4 +3,4 @@
 
 Objectif :
 
-  -  Créer un jeu d'echec en Java 
+  -  Créer un jeu d'échecs en Java 
