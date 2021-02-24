@@ -3,6 +3,7 @@ package game;
 
 /**
  * ChessBoard
+ * @author Morgann Riu
  */
 public class ChessBoard {
     private int[][] cases;

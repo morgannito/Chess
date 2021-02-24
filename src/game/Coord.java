@@ -2,6 +2,7 @@ package game;
 
 /**
  * Coord
+ * @author Morgann Riu
  */
 public class Coord {
 

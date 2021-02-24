@@ -4,6 +4,7 @@ import game.boardException.IllegalMove;
 import game.boardException.IllegalPosition;
 
 /**
+ * @author Morgann Riu
  * Mother class for all pieces of chessboard
  */
 

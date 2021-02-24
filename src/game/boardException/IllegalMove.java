@@ -1,7 +1,10 @@
 package game.boardException;
 import game.Coord;
 
+
+
 /**
+ * @author Morgann Riu
  * Illegal Move
  */
 public class IllegalMove extends Exception {

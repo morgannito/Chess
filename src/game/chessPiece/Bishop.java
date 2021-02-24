@@ -8,6 +8,7 @@ import game.boardException.IllegalMove;
 import game.boardException.IllegalPosition;
 
 /**
+ * @author Morgann Riu
  * A piece of chess : bishop
  */
 public class Bishop extends Piece {

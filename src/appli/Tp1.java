@@ -11,8 +11,10 @@ import game.chessPiece.*;
 /**
  *
  * TP1
+ * @author Morgann Riu
+ * @version 1
  */
-public class Tp1ex1 {
+public class Tp1 {
     /**
      *
      * @param args an array argument used with the console.

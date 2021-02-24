@@ -14,6 +14,7 @@ import game.boardException.IllegalPosition;
 public class Pawn extends Piece {
 
     /**
+     * @author Morgann Riu
      * ChessBoard
      */
     public ChessBoard board;

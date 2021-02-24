@@ -3,7 +3,6 @@ package game;
 /**
  * This documents "Color"
  *  @author Morgann Riu
- * @version 1
  */
 public enum Color {
 

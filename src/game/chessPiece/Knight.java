@@ -13,6 +13,7 @@ import game.boardException.IllegalPosition;
 public class Knight extends Piece{
 
     /**
+     * @author Morgann Riu
      * ChessBoard
      */
     public ChessBoard board;

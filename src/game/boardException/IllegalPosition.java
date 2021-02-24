@@ -3,6 +3,7 @@ package game.boardException;
 import game.Coord;
 
 /**
+ * @author Morgann Riu
  * Called when the user move out of the matrix
  */
 
