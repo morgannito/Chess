@@ -7,6 +7,11 @@ import game.boardException.IllegalMove;
 import game.boardException.IllegalPosition;
 import game.chessPiece.*;
 
+
+/**
+ *
+ * TP1
+ */
 public class Tp1ex1 {
     /**
      *
@@ -95,20 +100,6 @@ public class Tp1ex1 {
         //Initial Chess
         myChess.smartPrint();
         System.out.println("");
-
-        try{
-            // My news positions
-            Coord myCoordPawnW1 = new Coord(4,1);
-            myPawnW1.move(myCoordPawnW1);
-            Coord myQueenPawnB = new Coord(9,5);
-            myQueenB.move(myQueenPawnB);
-        } catch (IllegalPosition e){
-            System.out.println(e);
-        } catch (IllegalMove e){
-            System.out.println(e);
-        }
-        myChess.smartPrint();
-
     }
  }
 

@@ -13,8 +13,23 @@ public abstract class Piece {
     protected Color col;
 
     //Getter
+
+    /**
+     *
+     * @return  Coord
+     */
     public Coord getPlace() { return place; }
+
+    /**
+     *
+     * @return  ChessBoard
+     */
     public ChessBoard getBoard() { return board; }
+
+    /**
+     *
+     * @return  Color
+     */
     public Color getCol() { return col; }
 
     protected abstract void move(Coord c) throws IllegalMove, IllegalPosition;

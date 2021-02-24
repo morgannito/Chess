@@ -7,5 +7,10 @@ import game.Coord;
  */
 
 public class IllegalPosition extends Exception {
+
+    /**
+     * Illegal Position
+     * @param message  message
+     */
     public IllegalPosition(String message){ super (message); };
 }

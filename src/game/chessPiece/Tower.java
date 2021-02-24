@@ -12,8 +12,20 @@ import game.boardException.IllegalPosition;
  */
 
 public class Tower extends Piece {
+
+    /**
+     * ChessBoard
+     */
     public ChessBoard board;
+
+    /**
+     * Color
+     */
     public Color col;
+
+    /**
+     * Coord
+     */
     public Coord place;
 
     //Getter

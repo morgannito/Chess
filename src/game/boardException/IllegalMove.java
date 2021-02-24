@@ -2,9 +2,13 @@ package game.boardException;
 import game.Coord;
 
 /**
- * Called when the user move out a legal position of piece
+ * Illegal Move
  */
-
 public class IllegalMove extends Exception {
+
+    /**
+     * Illegal Move
+     * @param message message
+     */
     public IllegalMove(String message){ super (message); };
 }

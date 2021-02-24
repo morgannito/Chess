@@ -1,5 +1,9 @@
 package game;
 
+
+/**
+ * ChessBoard
+ */
 public class ChessBoard {
     private int[][] cases;
 

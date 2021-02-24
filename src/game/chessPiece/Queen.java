@@ -11,8 +11,20 @@ import game.boardException.IllegalPosition;
  * A piece of chess : queen
  */
 public class Queen extends Piece {
+
+    /**
+     * ChessBoard
+     */
     public ChessBoard board;
+
+    /**
+     * Color
+     */
     public Color col;
+
+    /**
+     * Coord
+     */
     public Coord place;
 
     //Getter
